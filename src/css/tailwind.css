@@ -47,11 +47,16 @@
 
 html {
   font-size: 14px;
+  font-family: @apply font-product-sans;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.current-link {
+  @apply text-light-blue bg-light-blue bg-opacity-015;
 }
 
 @tailwind utilities;

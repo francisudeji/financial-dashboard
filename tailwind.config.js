@@ -31,6 +31,12 @@ module.exports = {
         purple: '#02C39A',
       },
       spacing: {
+        '240px': '240px',
+        '14-73px': '14.73px',
+        '34-17px': '34.17px',
+        '40-33px': '40.33px',
+        '41-82px': '41.82px',
+        '68-16px': '68.16px',
         '2px': '2px',
         7: '1.75rem',
         10: '2.5rem',
@@ -43,6 +49,12 @@ module.exports = {
         80: '20rem',
         128: '32rem',
         '(screen-16)': 'calc(100vh - 4rem)',
+      },
+      opacity: {
+        '015': '0.15',
+      },
+      borderRadius: {
+        '8px': '8px',
       },
     },
   },
