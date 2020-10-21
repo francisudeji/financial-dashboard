@@ -1,6 +1,7 @@
 import React from 'react';
+import MainContent from './components/MainContent';
 import Sidebar from './components/Sidebar';
-import './css/styles.css';
+import TopContent from './components/TopContent';
 
 function App() {
   return (
@@ -8,9 +9,12 @@ function App() {
       <div className='w-240px h-screen relative'>
         <Sidebar />
       </div>
-      <main className='bg-light-gray h-screen flex-1 p-40-33px'>
-        <p>hello</p>
-      </main>
+      <MainContent>
+        <div className='space-y-14-98px'>
+          <TopContent />
+          <div>bottom content</div>
+        </div>
+      </MainContent>
     </div>
   );
 }
