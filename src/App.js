@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MainContent from './components/MainContent';
 import Sidebar from './components/Sidebar';
 import TopContent from './components/TopContent';
@@ -10,11 +10,34 @@ import BottomRightCard from './components/BottomRightCard';
 import TopRightCard from './components/TopRightCard';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <div className='h-screen w-full flex relative font-product-sans'>
-      <div className='w-240px h-screen relative hidden lg:block'>
+    <div className='h-screen w-full flex relative font-product-sans rel'>
+      <div
+        className={`w-240px h-screen relative ${
+          isSidebarOpen ? 'block' : 'hidden'
+        } lg:block`}
+      >
         <Sidebar />
       </div>
+
+      <button
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        className={`absolute flex items-center justify-center text-center top-0 left-0 ${
+          isSidebarOpen && 'ml-240px'
+        } mt-12 text-light-blue h-10 w-10`}
+      >
+        <svg
+          className='w-5 h-5 fill-current'
+          viewBox='0 0 20 20'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <title>Menu</title>
+          <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
+        </svg>
+      </button>
+
       <MainContent>
         <div className='space-y-14-98px flex flex-col'>
           <TopContent />
