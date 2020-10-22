@@ -8,8 +8,8 @@ import MoreIcon from '../assets/more.svg';
 
 function TopContent() {
   return (
-    <section className='flex items-center justify-between space-x-14-98px'>
-      <div className='w-3/4 flex justify-between space-x-14-98px'>
+    <section className='flex flex-col lg:flex-row lg:items-center lg:justify-between lg:space-x-14-98px'>
+      <div className='mt-4 lg:mt-0 order-2 lg:order-1 w-full lg:w-2/4'>
         <div className='relative flex-1'>
           <img
             src={SearchIcon}
@@ -24,15 +24,15 @@ function TopContent() {
             placeholder='Search'
           />
         </div>
-        <button className='w-1/3 flex h-47-47px px-21-53px items-center bg-white rounded-8px justify-between'>
+      </div>
+
+      <div className='order-1 lg:order-2 w-full lg:w-2/4 flex justify-between space-x-14-98px'>
+        <button className='w-1/2 flex h-47-47px px-21-53px items-center bg-white rounded-8px justify-between'>
           <img src={CalendarIcon} alt='calendar' />
           <span className='text-medium-gray'>January - December</span>
           <img src={DownArrowIcon} alt='down arrow' />
         </button>
-      </div>
-
-      <div className='w-1/4'>
-        <button className='w-full h-47-47px flex px-21-53px items-center bg-white rounded-8px justify-between'>
+        <button className='w-1/2 h-47-47px flex px-21-53px items-center bg-white rounded-8px justify-between'>
           <img src={BellIcon} alt='notifications' />
           <div className='flex items-center space-x-3'>
             <span className='text-medium-gray'>John Camp</span>

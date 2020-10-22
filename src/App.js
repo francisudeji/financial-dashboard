@@ -12,22 +12,22 @@ import TopRightCard from './components/TopRightCard';
 function App() {
   return (
     <div className='h-screen w-full flex relative font-product-sans'>
-      <div className='w-240px h-screen relative'>
+      <div className='w-240px h-screen relative hidden lg:block'>
         <Sidebar />
       </div>
       <MainContent>
-        <div className='space-y-14-98px h-screen flex flex-col mb-32'>
+        <div className='space-y-14-98px flex flex-col'>
           <TopContent />
-          <div className='bottom-content flex justify-between flex-1 space-x-14-98px'>
-            <section className='w-1/4 grid grid-rows-60x40 gap-14-98px'>
+          <div className='flex flex-col md:flex-row justify-between flex-1 mt-4 md:mt-0 md:space-x-14-98px'>
+            <section className='w-full md:w-1/4 grid grid-rows-60x40 gap-14-98px'>
               <TopLeftCard />
               <BottomLeftCard />
             </section>
-            <section className='w-2/4 one grid grid-rows-60x40 gap-14-98px'>
+            <section className='w-full md:w-2/4 grid md:grid-rows-60x40 gap-14-98px'>
               <TopCenterCard />
               <BottomCenterCard />
             </section>
-            <section className='w-1/4 one grid grid-rows-75x25 gap-14-98px'>
+            <section className='w-full md:w-1/4 mt-4 md:mt-0 grid grid-rows-75x25 gap-14-98px'>
               <TopRightCard />
               <BottomRightCard />
             </section>
