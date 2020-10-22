@@ -14,17 +14,17 @@
   font-style: italic;
   font-named-instance: 'Italic';
   src: url('../fonts/Product-Sans-Italic.ttf') format('truetype');
-}
+} */
 
 @font-face {
-  font-family: 'Product Sans';
+  font-family: 'Product Sans Bold';
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Bold';
   src: url('../fonts/Product-Sans-Bold.ttf') format('truetype');
 }
-
+/* 
 @font-face {
   font-family: 'Product Sans';
   font-weight: 100 900;
@@ -45,9 +45,10 @@
 @tailwind base;
 @tailwind components;
 
+body,
 html {
   font-size: 14px;
-  font-family: @apply font-product-sans;
+  /* font-family: 'Product Sans'; */
 }
 
 a {
